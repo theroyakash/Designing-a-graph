@@ -89,4 +89,3 @@ class GraphList:
                 print("-> ", end="")
 
         print("\nTotal cost of path: ", cost)
-
