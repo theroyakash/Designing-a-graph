@@ -1,16 +1,20 @@
-import numpy as np
-from PriorityQueue import PriorityQueue
+from adjlistGraph import GraphList
 
-def dijsktra_path(graph, start_from=0):
-
-    number_of_vertices = graph.vertices
-    
-    distances = [160] * number_of_vertices
-    distances[start_from] = 0
-
-    visited = [False] * number_of_vertices
-    visited[0] = True
-
-
-
-    return []
+graph = GraphList(9)
+graph.add_edge(0, 1, 4)
+graph.add_edge(0, 7, 8)
+graph.add_edge(1, 2, 8)
+graph.add_edge(1, 7, 11)
+graph.add_edge(2, 3, 7)
+graph.add_edge(2, 8, 2)
+graph.add_edge(2, 5, 4)
+graph.add_edge(3, 4, 9)
+graph.add_edge(3, 5, 14)
+graph.add_edge(4, 5, 10)
+graph.add_edge(5, 6, 2)
+graph.add_edge(6, 7, 1)
+graph.add_edge(6, 8, 6)
+graph.add_edge(7, 8, 7)
+graph.show_graph()
+graph.dijkstra(0)
+graph.show_path(0, 4)
