@@ -9,8 +9,8 @@ def dijsktra_path(graph, start_from=0):
     distances[start_from] = 0
 
     visited = [False] * number_of_vertices
+    visited[0] = True
 
-    
 
 
     return []
